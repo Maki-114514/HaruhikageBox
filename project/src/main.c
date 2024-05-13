@@ -113,13 +113,15 @@ int main(void)
             if(total_time == 12 * 61)
             {
                 total_time = 0;
-                total_time = 0;
 
                 track1_num = track2_num = 0;
                 track1_clicks = track2_clicks = 0;
 
                 track1_aviliable = track2_aviliable = 1;
 
+                BZ_Set_Key(BZ1, STOP);
+                BZ_Set_Key(BZ2, STOP);
+                
                 delay_ms(2000);
             } else
             {
