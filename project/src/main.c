@@ -50,7 +50,7 @@ int main(void)
         uint32_t track1_num = 0, track2_num = 0;
         uint32_t track1_clicks = 0, track2_clicks = 0;
 
-        uint8_t track1_aviliable = 0, track2_aviliable = 1;
+        uint8_t track1_aviliable = 1, track2_aviliable = 1;
 
         while (1)
         {
@@ -121,7 +121,7 @@ int main(void)
 
                 BZ_Set_Key(BZ1, STOP);
                 BZ_Set_Key(BZ2, STOP);
-                
+
                 delay_ms(2000);
             } else
             {
