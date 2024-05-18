@@ -37,8 +37,8 @@ void BZ_Init(uint8_t volume_percent1, uint8_t volume_percent2)
     gpio_init_struct.gpio_drive_strength = GPIO_DRIVE_STRENGTH_STRONGER;
     gpio_init(GPIOA, &gpio_init_struct);
 
-    gpio_pin_mux_config(GPIOA, GPIO_PINS_SOURCE8, GPIO_MUX_1);
-    gpio_pin_mux_config(GPIOA, GPIO_PINS_SOURCE5, GPIO_MUX_1);
+    gpio_pin_mux_config(GPIOA, GPIO_PINS_SOURCE2, GPIO_MUX_0);
+    gpio_pin_mux_config(GPIOA, GPIO_PINS_SOURCE4, GPIO_MUX_4);
 
     /* 定时器15初始化 */
     uint32_t prescaler_value = (uint16_t) (SystemCoreClock / 1000000) - 1;
