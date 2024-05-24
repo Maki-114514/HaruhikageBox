@@ -41,7 +41,7 @@ int main(void)
     system_clock_config();
 
     delay_init();
-    BZ_Init(50, 40);
+    BZ_Init(10, 20);
 
     while (1)
     {
@@ -54,6 +54,15 @@ int main(void)
 
         while (1)
         {
+            if(total_time == track1_clicks)
+            {
+                track1_aviliable = 1;
+            }
+            if(total_time == track2_clicks)
+            {
+                track2_aviliable = 1;
+            }
+
             if (track1_aviliable)
             {
                 if (track1_num > 0)
@@ -75,7 +84,6 @@ int main(void)
                 track1_num++;
                 track1_aviliable = 0;
             }
-
             if (track2_aviliable)
             {
                 if (track2_num > 0)
@@ -98,19 +106,8 @@ int main(void)
                 track2_aviliable = 0;
             }
 
-            if(total_time == track1_clicks)
-            {
-                track1_aviliable = 1;
-            }
 
-
-            if(total_time == track2_clicks)
-            {
-                track2_aviliable = 1;
-            }
-
-
-            if(total_time == 12 * 61)
+            if(total_time == 12 * 62)
             {
                 total_time = 0;
 
